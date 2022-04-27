@@ -1,5 +1,6 @@
 package com.github.nam_younghoon.cryptotaxlibs
 
+import android.content.res.Resources
 import org.junit.Test
 
 import org.junit.Assert.*
@@ -14,4 +15,6 @@ class ExampleUnitTest {
     fun addition_isCorrect() {
         assertEquals(4, 2 + 2)
     }
+
+
 }

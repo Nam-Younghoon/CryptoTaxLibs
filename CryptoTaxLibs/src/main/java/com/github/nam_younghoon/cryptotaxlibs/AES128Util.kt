@@ -5,9 +5,10 @@ import javax.crypto.Cipher
 import javax.crypto.spec.IvParameterSpec
 import javax.crypto.spec.SecretKeySpec
 
-class AES128Util {
-    val secretKey: String = "zmflqxhxortm!@#$"
-    val iv: String = "zmflqxhxortm!@#$"
+class AES128Util(secretKey: String) {
+    private var secretKey: String = secretKey
+    private val iv: String = "zmflqxhxortm!@#$"
+
 
     fun encrypt(text: String) : String {
         val cipher: Cipher = Cipher.getInstance("AES/CBC/PKCS5PADDING")
@@ -27,6 +28,4 @@ class AES128Util {
         val decrypted = cipher.doFinal(decodedBytes)
         return String(decrypted, Charsets.UTF_8)
     }
-
-
 }
