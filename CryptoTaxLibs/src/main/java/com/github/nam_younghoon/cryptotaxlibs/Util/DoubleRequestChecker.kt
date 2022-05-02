@@ -1,4 +1,4 @@
-package com.github.nam_younghoon.cryptotaxlibs
+package com.github.nam_younghoon.cryptotaxlibs.Util
 
 object DoubleRequestChecker {
 

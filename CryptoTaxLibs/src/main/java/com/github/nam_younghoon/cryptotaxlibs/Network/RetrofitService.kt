@@ -1,4 +1,4 @@
-package com.github.nam_younghoon.cryptotaxlibs
+package com.github.nam_younghoon.cryptotaxlibs.Network
 
 
 import com.google.gson.JsonObject
@@ -10,11 +10,10 @@ interface RetrofitService {
     @JvmSuppressWildcards
     @FormUrlEncoded
     @POST("/")
-    fun init(@FieldMap params: Map<String, Any>) : Call<JsonObject>
+    fun init(@FieldMap params: Map<String, String>) : Call<JsonObject>
 
     @JvmSuppressWildcards
-    @FormUrlEncoded
     @POST("/getUserTaxInfo")
-    fun getUserTaxInfo(@FieldMap params: Map<String, Any>) : Call<JsonObject>
+    fun getUserTaxInfo(@Body params: JsonObject) : Call<JsonObject>
 
 }
